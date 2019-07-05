@@ -11,6 +11,12 @@ mkdir -p /data/db
 sudo chown -R `id -un` /data/db
 sudo mongod
 
+Para cerrar la conexión: 
+
+mongo --port 27017 --eval 'db.adminCommand("shutdown")'
+mongo --port 27018 --eval 'db.adminCommand("shutdown")'
+mongo --port 27019 --eval 'db.adminCommand("shutdown")'
+
 https://franyerverjel.com/blog/instalar-mongodb-en-un-mac/
 
 2. Installar Robo 3T para administrar las bases de datos mongo
@@ -391,3 +397,9 @@ exports.verificaToken = function(req, res, next) {
 
 };
 ```
+
+22. Librería para subir archivos con express
+
+`npm install --save express-fileupload`
+
+23. Librería para ver las imágenes de usuario
